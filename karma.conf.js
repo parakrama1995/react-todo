@@ -19,6 +19,13 @@ module.exports = function (config) {
         timeout: '5000'
       }
     },
+    module.exports = function(config) {
+  config.set({
+    basePath: '../..',
+    frameworks: [''],
+    //...
+  });
+};
     webpack: webpackConfig,
     webpackServer: {
       noInfo: true
