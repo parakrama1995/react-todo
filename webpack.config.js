@@ -15,6 +15,9 @@ module.exports = {
       '$': 'jquery',
       'jQuery': 'jquery'
     })
+    sudo cp /home/[user]/.nvm/versions/node/[node_version]/lib/node_modules/webpack-dev-server/bin/webpack-dev-server.js /usr/local/bin/webpack-dev-server
+chown [user]:[user] /usr/local/bin/webpack-dev-server
+chmod +x /usr/local/bin/webpack-dev-server
   ],
   output: {
     path: __dirname,
