@@ -10,6 +10,13 @@ module.exports = function (config) {
       'node_modules/foundation-sites/dist/foundation.min.js',
       'app/tests/**/*.test.jsx'
     ],
+    externals: {
+  'Config': JSON.stringify(process.env.ENV === 'production' ? {
+    serverUrl: "https://myserver.com"
+  } : {
+    serverUrl: "http://localhost:8090"
+  })
+}
     preprocessors: {
       'app/tests/**/*.test.jsx': ['webpack', 'sourcemap']
     },
